@@ -42,6 +42,11 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def search
+    users = User.where("LOWER(firstName) LIKE ?  or LOWER(lastName) LIKE  ?   or LOWER(email) LIKE  ?", "%#{params[:input].downcase}%", "%#{params[:input].downcase}%", "%#{params[:input].downcase}%")
+    return render json: {status: 200, all_users: {users: users}, message: "all search users"}
+  end
+
   private
 
     def set_user
