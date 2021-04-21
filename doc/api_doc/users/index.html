@@ -1,0 +1,121 @@
+api :GET, '/users', "All Users List"
+error 401, "Unauthorized"
+error 404, "Page not found"
+error 403, "Something went wrong"
+error 500, "Internal Server Error"
+
+example <<-TEXT
+
+Index In API
+
+TEXT
+
+example <<-TEXT
+
+Api Details:
+---------------------------------------
+  {
+    api_name: user list,
+    method: GET,
+    path: /api/users,
+    host: http://localhost:3000/
+  }
+
+TEXT
+
+example <<-TEXT
+
+Header Body:
+---------------------------------------
+  {
+    Content-Type: application/json
+  }
+
+TEXT
+
+example <<-TEXT
+
+Request Body:
+---------------------------------------
+  { 
+    
+  }
+
+TEXT
+
+example <<-TEXT
+
+Response Body:
+---------------------------------------
+{
+    "status": 200,
+    "all_users": {
+        "users": [
+            {
+                "_id": {
+                    "$oid": "6071ef719cabac325ff1bb89"
+                },
+                "email": "ae@relativity.com",
+                "firstName": "albert",
+                "lastName": "einstein"
+            },
+            {
+                "_id": {
+                    "$oid": "6071ef719cabac325ff1bb8a"
+                },
+                "email": "mc@radiation.com",
+                "firstName": "marie",
+                "lastName": "curie"
+            },
+            {
+                "_id": {
+                    "$oid": "6071ef719cabac325ff1bb8b"
+                },
+                "email": "in@gravity.com",
+                "firstName": "issac",
+                "lastName": "newton"
+            },
+            {
+                "_id": {
+                    "$oid": "6071ef719cabac325ff1bb8c"
+                },
+                "email": "gg@astronomy.com",
+                "firstName": "galileo",
+                "lastName": "galilei"
+            }
+        ]
+    },
+    "message": "all users list"
+}
+TEXT
+
+example <<-TEXT
+
+Required Parameters
+======================================================================================
+
+email: required
+password: required
+
+TEXT
+
+example <<-TEXT
+
+Required Header
+======================================================================================
+
+Content-Type: required
+
+TEXT
+
+example <<-TEXT
+
+Summary:
+=====================================================================================
+
+This API is used for all users list. You can refer all users list screen as well 
+
+
+TEXT
+
+

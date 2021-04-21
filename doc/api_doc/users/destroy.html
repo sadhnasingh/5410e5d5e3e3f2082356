@@ -1,0 +1,76 @@
+api :DELETE, '/users/6071ef719cabac325ff1bb8c', "Destroy User"
+error 401, "Unauthorized"
+error 404, "Page not found"
+error 403, "Something went wrong"
+error 500, "Internal Server Error"
+
+example <<-TEXT
+
+Destroy In API
+
+TEXT
+
+example <<-TEXT
+
+Api Details:
+---------------------------------------
+  {
+    api_name: destroy,
+    method: DELETE,
+    path: /api/v1/documents/6071ef719cabac325ff1bb8c,
+    host: http://localhost:3000/
+  }
+
+TEXT
+
+example <<-TEXT
+
+Header Body:
+---------------------------------------
+  {
+    Content-Type: application/json
+  }
+
+TEXT
+
+
+example <<-TEXT
+
+Response Body:
+---------------------------------------
+{
+    "status": 200,
+    "message": "Successfully Deleted"
+}
+TEXT
+
+example <<-TEXT
+
+Required Parameters
+======================================================================================
+
+email: required
+password: required
+
+TEXT
+
+example <<-TEXT
+
+Required Header
+======================================================================================
+
+Content-Type: required
+
+TEXT
+
+example <<-TEXT
+
+Summary:
+=====================================================================================
+
+This API is used for Destroy. You can refer Destroy screen as well 
+
+
+TEXT
+
+

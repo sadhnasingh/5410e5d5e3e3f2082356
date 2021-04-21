@@ -1,0 +1,97 @@
+api :GET, '/users/6071ef719cabac325ff1bb8c', "Show User"
+error 401, "Unauthorized"
+error 404, "Page not found"
+error 403, "Something went wrong"
+error 500, "Internal Server Error"
+
+example <<-TEXT
+
+Create In API
+
+TEXT
+
+example <<-TEXT
+
+Api Details:
+---------------------------------------
+  {
+    api_name:show,
+    method: GET,
+    path: /api/users/3,
+    host: http://localhost:3000/
+  }
+
+TEXT
+
+example <<-TEXT
+
+Header Body:
+---------------------------------------
+  {
+    Content-Type: application/json
+  }
+
+TEXT
+
+example <<-TEXT
+
+Request Body:
+---------------------------------------
+  { 
+  
+  }
+
+
+TEXT
+
+example <<-TEXT
+
+Response Body:
+---------------------------------------
+{
+    "status": 200,
+    "user_detail": {
+        "user": {
+            "_id": {
+                "$oid": "6071ef719cabac325ff1bb8c"
+            },
+            "email": "gg@astronomy.com",
+            "firstName": "galileo",
+            "lastName": "galilei"
+        }
+    },
+    "message": "User Details"
+}
+
+TEXT
+
+example <<-TEXT
+
+Required Parameters
+======================================================================================
+
+email: required
+password: required
+
+TEXT
+
+example <<-TEXT
+
+Required Header
+======================================================================================
+
+Content-Type: required
+
+TEXT
+
+example <<-TEXT
+
+Summary:
+=====================================================================================
+
+This API is used for Show. You can refer Create screen as well 
+
+
+TEXT
+
+
