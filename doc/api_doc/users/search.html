@@ -1,0 +1,107 @@
+api :GET, '/typeahead/:input', "Search User"
+error 401, "Unauthorized"
+error 404, "Page not found"
+error 403, "Something went wrong"
+error 500, "Internal Server Error"
+
+example <<-TEXT
+
+Search In API
+
+TEXT
+
+example <<-TEXT
+
+Api Details:
+---------------------------------------
+  {
+    api_name:search,
+    method: GET,
+    path: /api/typeahead/test,
+    host: http://localhost:3000/
+  }
+
+TEXT
+
+example <<-TEXT
+
+Header Body:
+---------------------------------------
+  {
+    Content-Type: application/json
+  }
+
+TEXT
+
+example <<-TEXT
+
+Request Body:
+---------------------------------------
+  { 
+  
+  }
+
+
+TEXT
+
+example <<-TEXT
+
+Response Body:
+---------------------------------------
+{
+    "status": 200,
+    "all_users": {
+        "users": [
+            {
+                "_id": {
+                    "$oid": "607fe35a9cabac1f8712893d"
+                },
+                "email": "test@gmail.com",
+                "firstName": "test",
+                "lastName": "tester"
+            },
+            {
+                "_id": {
+                    "$oid": "607feda19cabac570d58c7d2"
+                },
+                "email": "test@gmail.com",
+                "firstName": "shikttdh",
+                "lastName": "ttttttttttt"
+            }
+        ]
+    },
+    "message": "all search users"
+}
+
+TEXT
+
+example <<-TEXT
+
+Required Parameters
+======================================================================================
+
+email: required
+password: required
+
+TEXT
+
+example <<-TEXT
+
+Required Header
+======================================================================================
+
+Content-Type: required
+
+TEXT
+
+example <<-TEXT
+
+Summary:
+=====================================================================================
+
+This API is used for Show. You can refer Create screen as well 
+
+
+TEXT
+
+
