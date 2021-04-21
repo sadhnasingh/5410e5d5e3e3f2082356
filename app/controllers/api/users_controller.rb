@@ -43,7 +43,7 @@ class Api::UsersController < ApplicationController
   end
 
   def search
-    users = [User.where(firstName: /#{params[:input]}/) + User.where(lastName: /#{params[:input]}/) + User.where(email: /#{params[:input]}/)].uniq
+    users = [User.where(firstName: /#{params[:input]}/) + User.where(lastName: /#{params[:input]}/) + User.where(email: /#{params[:input]}/)].first.uniq
     return render json: {status: 200, all_users: {users: users}, message: "all search users"}
   end
 
