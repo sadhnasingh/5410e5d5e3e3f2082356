@@ -43,7 +43,7 @@ class Api::UsersController < ApplicationController
   end
 
   def search
-    users = User.where("LOWER(firstName) LIKE ?  or LOWER(lastName) LIKE  ?   or LOWER(email) LIKE  ?", "%#{params[:input].downcase}%", "%#{params[:input].downcase}%", "%#{params[:input].downcase}%")
+    users = [User.where(firstName: /#{params[:input]}/) + User.where(lastName: /#{params[:input]}/) + User.where(email: /#{params[:input]}/)].uniq
     return render json: {status: 200, all_users: {users: users}, message: "all search users"}
   end
 
